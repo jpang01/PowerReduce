@@ -169,7 +169,7 @@ output: { apple: 10, orange: 30, peach: 50 }
 
 ```js
 y = [0,0,0,0,0,0,0,0,0,0,0].reduce(
-  (p,e,i)=>{if(i==0){p.push(0)} else if (i==1) {p.push(1)} else { p.push(p[i-1]+p[i-2])}; return p}, 
+  (p,e,i)=>{if(i<=1){p.push(i)} else { p.push(p[i-1]+p[i-2])}; return p}, 
   []);
 log(y);
 output:  [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
