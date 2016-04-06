@@ -122,7 +122,7 @@ output: [ 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
 
 ### use a closure as a callback function.
 ```js
-result = [0,1,2,3,4,5,6,7,8,9,10].reduce( ()=>{let x = 0; return (p,c,i)=>{x+=c; p.push(x); return p}}(), []);
+result = [0,1,2,3,4,5,6,7,8,9,10].reduce(()=>{let x=0; return (p,c)=>{p.push(x+=c); return p}}(), []);
 
 log(result);
 
