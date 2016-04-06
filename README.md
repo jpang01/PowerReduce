@@ -34,7 +34,7 @@ Here is the output.
  0:9:9:  :0,1,2,3,4,5,6,7,8,9,10
  0:10:10:  :0,1,2,3,4,5,6,7,8,9,10
  ```
- From the output, we notice the index is start from 1 instead of 0. The previousValue is initialized by the forst elemt of the array.
+ From the output, we notice the index is start from 1 instead of 0. The previousValue is initialized by the first elemt of the array.
  
   Now, we set the initialValue to zero.
  
@@ -92,7 +92,7 @@ output: 45
 
 Now we got the right answer. For this reason, my personal preferrence is alway initialize a variable.
 
-### count all elements which is larger zero.
+### count all elements which is larger than zero.
 
 ```js
 result = [0,1,2,3,4,5,6,7,8,9,10].reduce((p,c)=>{if(c>0) p++; return p}, 0);
@@ -155,4 +155,13 @@ result = docs.reduce((p,c)=>{p[c.name]=c.count; return p},{});
 log(result);
 
 output: { apple: 10, orange: 30, peach: 50 }
+```
+### calculate Fibonacci sequence
+
+```js
+y = [0,0,0,0,0,0,0,0,0,0,0].reduce(
+  (p,e,i)=>{if(i==0){p.push(0)} else if (i==1) {p.push(1)} else { p.push(p[i-1]+p[i-2])}; return p}, 
+  []);
+log(y);
+output:  [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
 ```
