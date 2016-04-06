@@ -10,7 +10,7 @@ Let's test the parameters first.
 
 ### The different behaviors to set or not set the initialValue.
 
-In the following example, the parameter initialValue is not set. 
+In the following example, the parameter initialValue is not been set. 
 
 
 ```js
@@ -34,7 +34,7 @@ Here is the output.
  0:9:9:  :0,1,2,3,4,5,6,7,8,9,10
  0:10:10:  :0,1,2,3,4,5,6,7,8,9,10
  ```
- From the output, we notice the index is start from 1 instead of 0. The previousValue is initialized by the first elemt of the array.
+ From the output, we notice the index is starting from 1 instead of 0. The previousValue is initialized by the first element of the array.
  
   Now, we set the initialValue to zero.
  
@@ -62,7 +62,7 @@ Here is the out.
  0:10:10:  :0,1,2,3,4,5,6,7,8,9,1
  ```
  
- From this output, we see the index is started from 0 instead of 1 as previous example. The previousValue is initialized with the value we given, which is 0. It is an important difference to initialize or not initialize the previousValue. It may cause bug if we are not careful.
+ From this output, we see the index is started from 0 instead of 1 as previous example. The previousValue is initialized with the given value, which is 0. It is an important difference to initialize or not initialize the previousValue. It may cause bug if we are not careful.
  
  In the following example, we intend to sum all the elements.
  
@@ -80,7 +80,7 @@ log("y= " + y);
 output: y = 39
 ```
 
-Here, we get a wrong answer of 39 instead of 45. The reason is the previousValue p is initialized to 3, instead of 9.
+Here, we get a wrong answer of 39 instead of 45. The reason is the previousValue p was initialized to 3, instead of 9.
 
 Now, let's initialize the previousValue p to 0.
 ```js
@@ -90,7 +90,7 @@ log("y= " + y);
 output: 45
 ```
 
-Now we got the right answer. For this reason, my personal preferrence is alway initialize a variable.
+Now we got the right answer. For this reason, my personal preferrence *is alway initialize a variable*.
 
 ### count all elements which is larger than zero.
 
